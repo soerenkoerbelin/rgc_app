@@ -1,0 +1,86 @@
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 400;
+    font-style: normal;
+    src: url("NeutrifStudio-Regular.otf") format("woff2"), url("NeutrifStudio-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 500;
+    font-style: normal;
+    src: url("NeutrifStudio-Medium.otf") format("woff2"), url("NeutrifStudio-Medium.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 600;
+    font-style: normal;
+    src: url("NeutrifStudio-SemiBold.otf") format("woff2"), url("NeutrifStudio-SemiBold.otf") format("woff");
+    font-display: swap;
+    }
+
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 700;
+    font-style: normal;
+    src: url("NeutrifStudio-Bold.otf") format("woff2"), url("NeutrifStudio-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 800;
+    font-style: normal;
+    src: url("NeutrifStudio-ExtraBold.otf") format("woff2"), url("NeutrifStudio-ExtraBold.otf") format("woff");
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 400;
+    font-style: italic;
+    src: url("NeutrifStudio-RegularItalic.otf") format("woff2"), url("NeutrifStudio-RegularItalic.woff")
+    format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 500;
+    font-style: italic;
+    src: url("NeutrifStudio-MediumItalic.otf") format("woff2"), url("NeutrifStudio-MediumItalic.otf")
+    format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 600;
+    font-style: italic;
+    src: url("NeutrifStudio-SemiBoldItalic.otf") format("woff2"), url("NeutrifStudio-SemiBoldItalic.otf")
+    format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 700;
+    font-style: italic;
+    src: url("NeutrifStudio-BoldItalic.otf") format("woff2"), url("NeutrifStudio-BoldItalic.otf")
+    format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NeutrifStudio;
+    font-weight: 800;
+    font-style: italic;
+    src: url("NeutrifStudio-ExtraBoldItalic.otf") format("woff2"), url("NeutrifStudio-ExtraBoldItalic.otf")
+    format("woff");
+    font-display: swap;
+}
