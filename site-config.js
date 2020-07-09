@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  siteTitle: `Gatsby Universal`,
-  siteTitleShort: `GatsbyU`,
-  siteDescription: `An opinionated starter for Gatsby.`,
-  siteUrl: `https://gu.fabianschultz.com`,
+  siteTitle: `Ragazzi Galli`,
+  siteTitleShort: `RGC`,
+  siteDescription: `Site for Ragazzi Galli Cycling.`,
+  siteUrl: `https://ragazzi-galli.cc`,
   themeColor: `#000`,
   backgroundColor: `#fff`,
   pathPrefix: null,
