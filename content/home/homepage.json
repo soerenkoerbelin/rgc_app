@@ -15,5 +15,6 @@
     "title": "Intersection Observer",
     "copy": "Including a polyfill for Safari.",
     "image": "../images/gallery/intersection-observer.jpg"
-  }]
+  }
+]
 }
