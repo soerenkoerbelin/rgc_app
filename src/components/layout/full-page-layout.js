@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import GlobalStyle from 'global.css.js';
-import { Container } from './full-page-layout.css';
+import { Container, ContentWrapper } from './full-page-layout.css';
 
 const FullPageLayout = ({ children }) => (
   <Container>
     <div>
       <GlobalStyle />
-      {children}
+      <ContentWrapper>{children}</ContentWrapper>
     </div>
   </Container>
 );

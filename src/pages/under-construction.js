@@ -7,7 +7,6 @@ import Title from 'components/title';
 
 import InitialsContainer from 'components/initials-container';
 import Initials from '../../content/images/gallery/RGC_initials.svg';
-import { rgc_lightgray } from '../constants/theme';
 
 const UnderConstruction = ({ data }) => (
   <FullPageLayout>
@@ -27,7 +26,7 @@ const UnderConstruction = ({ data }) => (
         alt={data.underConstructionJson.rooster.title}
       />
     </figure>
-    <InitialsContainer svg={Initials} color={rgc_lightgray} />
+    <InitialsContainer svg={Initials} color="rgc_lightgray" size="64px" />
   </FullPageLayout>
 );
 
