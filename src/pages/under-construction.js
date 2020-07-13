@@ -11,21 +11,26 @@ import Initials from '../../content/images/gallery/RGC_initials.svg';
 const UnderConstruction = ({ data }) => (
   <FullPageLayout>
     <Title as="h1" size="large" color="rgc_red">
-      {data.underConstructionJson.headline}
+      {data.underConstructionJson.headline_first}
+    </Title>
+    <div style={{ width: '100%' }}>
+      <figure>
+        <Img
+          fluid={
+            data.underConstructionJson.rooster.path
+              ? data.underConstructionJson.rooster.path.childImageSharp.fluid
+              : {}
+          }
+          alt={data.underConstructionJson.rooster.title}
+        />
+      </figure>
+    </div>
+    <Title as="h1" size="large" color="rgc_red">
+      {data.underConstructionJson.headline_second}
     </Title>
     <Title as="h2" color="rgc_red">
       {data.underConstructionJson.subheadline}
     </Title>
-    <figure>
-      <Img
-        fluid={
-          data.underConstructionJson.rooster.path
-            ? data.underConstructionJson.rooster.path.childImageSharp.fluid
-            : {}
-        }
-        alt={data.underConstructionJson.rooster.title}
-      />
-    </figure>
     <InitialsContainer svg={Initials} color="rgc_lightgray" size="64px" />
   </FullPageLayout>
 );
@@ -39,13 +44,14 @@ export default UnderConstruction;
 export const query = graphql`
   query UnderConstructionQuery {
     underConstructionJson {
-      headline
+      headline_first
+      headline_second
       subheadline
       rooster {
         title
         path {
           childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
+            fluid {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

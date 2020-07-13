@@ -5,10 +5,8 @@ import { Container, ContentWrapper } from './full-page-layout.css';
 
 const FullPageLayout = ({ children }) => (
   <Container>
-    <div>
       <GlobalStyle />
-      <ContentWrapper>{children}</ContentWrapper>
-    </div>
+      {children}
   </Container>
 );
 
