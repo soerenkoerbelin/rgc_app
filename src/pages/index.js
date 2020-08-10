@@ -1,33 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Layout from 'components/layout';
-import Box from 'components/box';
-import Title from 'components/title';
-import Gallery from 'components/gallery';
-import IOExample from 'components/io-example';
-import Modal from 'containers/modal';
+import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
+import FullPageLayout from 'components/layout/full-page-layout';
+import Title from 'components/title';
+
+import InitialsContainer from 'components/initials-container';
+import Initials from '../../content/images/gallery/RGC_initials.svg';
 
 const Index = ({ data }) => (
-  <Layout>
-    <Box>
-      <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-      </Title>
-      <Modal>
-        <video
-          src="https://i.imgur.com/gzFqNSW.mp4"
-          playsInline
-          loop
-          autoPlay
-          muted
+  <FullPageLayout>
+    <Title as="h1" size="larger" color="rgc_red" weight="bolder">
+      {data.underConstructionJson.headline_first}
+    </Title>
+    <div style={{ width: '100%' }}>
+      <figure>
+        <Img
+          fluid={
+            data.underConstructionJson.rooster.path
+              ? data.underConstructionJson.rooster.path.childImageSharp.fluid
+              : {}
+          }
+          style={{ minWidth: '150px' }}
+          alt={data.underConstructionJson.rooster.title}
         />
-      </Modal>
-    </Box>
-    <Gallery items={data.homeJson.gallery} />
-    <div style={{ height: '50vh' }} />
-    <IOExample />
-  </Layout>
+      </figure>
+    </div>
+    <Title as="h1" size="larger" color="rgc_red" weight="bolder">
+      {data.underConstructionJson.headline_second}
+    </Title>
+    <div className="subheadline">
+      <Title as="h2" size="large" color="rgc_red">
+        {data.underConstructionJson.subheadline_first}
+      </Title>
+      <Title as="h2" size="large" color="rgc_red">
+        {data.underConstructionJson.subheadline_second}
+      </Title>
+    </div>
+    <div className="initials-container">
+      <InitialsContainer svg={Initials} color="rgc_lightgray" size="64px" />
+    </div>
+  </FullPageLayout>
 );
 
 Index.propTypes = {
@@ -37,21 +50,17 @@ Index.propTypes = {
 export default Index;
 
 export const query = graphql`
-  query HomepageQuery {
-    homeJson {
-      title
-      content {
-        childMarkdownRemark {
-          html
-          rawMarkdownBody
-        }
-      }
-      gallery {
+  query UnderConstructionQuery {
+    underConstructionJson {
+      headline_first
+      headline_second
+      subheadline_first
+      subheadline_second
+      rooster {
         title
-        copy
-        image {
+        path {
           childImageSharp {
-            fluid(maxHeight: 500, quality: 90) {
+            fluid {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
