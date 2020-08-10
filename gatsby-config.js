@@ -1,10 +1,10 @@
 const siteConfig = require('./site-config');
 
 module.exports = {
+  pathPrefix: "/rgc_app",
   siteMetadata: {
     ...siteConfig,
   },
-  pathPrefix: "/rgc_app",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
