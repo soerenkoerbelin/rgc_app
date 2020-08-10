@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     ...siteConfig,
   },
+  pathPrefix: "/rgc_app",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
